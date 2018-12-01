@@ -90,7 +90,7 @@ fun s:set_props()
 
         let b:block_comment = 1
         let b:comment_char = ' *'
-        let b:comment_begin = '/**'
+        let b:comment_begin = '/*'
         let b:comment_end = ' */'
     " ----------------------------------
     elseif b:filetype == 'haskell'
@@ -111,14 +111,14 @@ fun s:set_props()
         let b:comment_char = '#'
     " ----------------------------------
     elseif b:filetype == 'python'
-        let b:first_line = '#!/usr/bin/env python3'
-        let b:first_line_pattern = '#!\s*/usr/bin/env\s* python3'
+        let b:first_line = '#!/usr/bin/env python'
+        let b:first_line_pattern = '#!\s*/usr/bin/env\s* python'
         let b:encoding = '# -*- coding: utf-8 -*-'
         let b:comment_char = '#'
     " ----------------------------------
     elseif b:filetype == 'sh'
-        let b:first_line = '#!/bin/bash'
-        let b:first_line_pattern = '#!\s*/bin/bash'
+        let b:first_line = '#!/bin/sh'
+        let b:first_line_pattern = '#!\s*/bin/sh'
         let b:comment_char = '#'
     elseif b:filetype == 'zsh'
         let b:first_line = '#!/bin/zsh'
@@ -151,7 +151,7 @@ fun s:set_props()
         let b:comment_char = "!!"
     " ----------------------------------
     elseif b:filetype == "ocaml"
-        let b:comment_begin = "(**"
+        let b:comment_begin = "(*"
         let b:comment_end = "*)"
         let b:comment_char = "*"
         let b:block_comment = 1
